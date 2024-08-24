@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
+  m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 861092504}
   - component: {fileID: 861092508}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,9 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d737d216959b5c6469a37e8d6a7f729a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textureWidth: 512
-  _textureHeight: 512
-  _dstMaterial: {fileID: 2100000, guid: 783717070dcbdcd4b8cb72d5ddb050ce, type: 2}
+  seed: 69
+  textureWidth: 512
+  textureHeight: 512
+  dstMaterial: {fileID: 2100000, guid: 783717070dcbdcd4b8cb72d5ddb050ce, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +375,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
