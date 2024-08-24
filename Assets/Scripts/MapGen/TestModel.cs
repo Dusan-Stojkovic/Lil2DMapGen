@@ -14,6 +14,17 @@ namespace MapGen
       (2, 32, 64, Color.green),
       (1, 64, 64, Color.magenta)
     };
+    private static (int side, bool x, bool y)[] roads =
+      new (int side, bool x, bool y)[]
+    {
+      (4, false, true),
+      (4, true, false),
+      (4, false, true),
+      (8, true, false),
+      (8, false, true),
+      (16, true, false),
+      (16, false, true)
+    };
     public List<Prefab> testModel()
     {
       int i = 0;
@@ -31,6 +42,11 @@ namespace MapGen
             assets.Add(new Prefab(s1, s2, 
               c, orientation));
         }
+      }
+      foreach((int side, bool x, bool y) in roads)
+      {
+        orientation = Chunk.rnd.Next(0, 3);
+        assets.Add(new Road(side, x, y, orientation));
       }
       assets.Sort();
       return assets;
